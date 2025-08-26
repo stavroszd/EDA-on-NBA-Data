@@ -1,10 +1,26 @@
-# NBA Team and City Population Correlation Analysis
-This is my approach to the assignment in the 'Applied Data Science using Python' of the UoM. 
-Essentially, this project performs an analysis of the correlation between NBA team win percentages and their respective cities' population. 
-The analysis uses data from the NBA's 2018 season and city population data to explore if there is a relationship between a city's size and its NBA team's performance.
-In order to explore this we calculate the pearson coefficient - through these procedures. 
+# 🏟️ Data Analysis on US Sports Data (NBA, NHL, NFL, MLB)
 
-- Handling missing data and keeping what we need
-- Cleaning team names to ensure proper matching - this is done by a function that I have developed to work on NHL,NFL and MLS data as well (automation) 
-- Standardizing city names - using a pretty cool algorithm of seeing if the team name starts with a city's name. 
-- Merging the cleaned city population data with NBA teams' win percentages and then calculating the Pearson correlation. 
+This project explores how to **automate the ingestion, cleaning, and standardization of messy sports datasets** across major US leagues (NBA, MLB, NHL, NFL) in compliance to official census metro-area data.  
+The question we explore in this EDA project is: **Do bigger cities perform better in professional sports?**
+
+In exploration of this question we compute the Pearson correlation of each metro-area with the aggregated W/L% ratio of the teams that it contains. 
+Moreover, in order to reduce the amount of manual mappings of 100+ teams to their region, we developed a heuristic based technique (first token of string + some manual overiding) that handled about 80% of the matches reducing the time of mapping by hours. 
+
+---
+
+## 🔑 Highlights
+
+- **Unified Pipeline:** Built a reusable cleaning + standardization pipeline to handle different league datasets.  
+- **Automated Name Mapping:** Developed a hybrid heuristic (first-token + manual overrides) that auto-resolved ~80 team–city matches, eliminating hours of manual reconciliation across 100+ potential mappings.  
+- **Statistical Rigor:** Computed Pearson correlation between metro population and team performance (W/L%), aggregated by city.  
+- **Scalability:** Extended from NBA to MLB, NHL, and NFL with minimal additional code.  
+
+---
+
+## 📊 Findings
+
+Each league’s correlation analysis is available in the corresponding notebook.  
+
+**Consensus:** 🏆 Talent exists everywhere.  
+
+
